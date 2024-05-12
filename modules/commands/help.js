@@ -156,8 +156,6 @@ module.exports.run = async function ({ api, event, args, getText }) {
       numberFontPage[totalPages - 1]
     } │\n╰ ──────── ╯\n`;
     msg += getText("helpList", commands.size, categoryCount, prefix);
-
-    fs.writeFileSync(path, Buffer.from(data, "utf-8"));
     const config = require("./../../config.json")
     const msgg = {
   body: `╭──────────────╮\n│𝖢𝗈𝗆𝗆𝖺𝗇𝖽 & 𝖢𝖺𝗍𝖾𝗀𝗈𝗋𝗒│\n╰──────────────╯\n‣ Bot Owner: ${config.DESIGN.Admin}\n\n` + msg + `\n◖Total pages available: ${totalPages}.\n` + `\n╭ ──── ╮\n│ GUIDE │\n╰ ──── ╯\n` + getText("guideList", config.PREFIX),
